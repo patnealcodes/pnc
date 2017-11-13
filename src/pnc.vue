@@ -45,6 +45,7 @@ export default {
   }
 
   .pnc-portfolio__sections {
+    background: $background-gray;
     display: flex;
     flex: 1;
     flex-direction: column;

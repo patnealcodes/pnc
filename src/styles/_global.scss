@@ -1,4 +1,3 @@
-@import url('https://use.fontawesome.com/b3fdbcc958.js');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 @import 'vars';
 
@@ -15,7 +14,7 @@ html, body {
 }
 
 body {
-    background: $background-gray;
+    background: $black;
 }
 
 ul, ol {
@@ -30,11 +29,11 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: $font-1;
+    font-size: 2.5em;
 }
 
 h2 {
-    font-size: $font-2;
+    font-size: 2em;
 }
 
 // Global Styles
@@ -44,20 +43,57 @@ h2 {
     align-items: center;
     display: flex;
     justify-content: center;
+
+}
+
+.pnc-header,
+.pnc-social {
+    z-index: 2;
 }
 
 .pnc-section {
     flex-grow: 1;
     align-items: stretch;
+
+    h1 {
+        font-size: 1.5em;
+    }
 }
 
 .pnc-header__container,
 .pnc-social__container,
 .pnc-section__container {
+    padding: 1em .75em;
     max-width: 960px;
     width: 100%;
 
     .pnc-section & {
         background: white;
+    }
+
+    @media screen and (min-width: 590px) {
+        padding: 2em 1.5em;
+    }
+}
+
+.pnc-button {
+    box-shadow: .25em .25em .5em rgba(0,0,0,.25);
+    border-radius: .5em;
+    display: block;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition: .2s all ease-in-out;
+
+    &--resume {
+        background-color: $button-purple;
+        color: white;
+
+        &:hover {
+            background-color: lighten($button-purple, 3);
+        }
+    }
+
+    &:hover {
+        transform: scale(1.05);
     }
 }

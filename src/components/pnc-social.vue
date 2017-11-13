@@ -1,8 +1,13 @@
 <template>
   <section class="pnc-social">
     <div class="pnc-social__container">
-      <h1>PNC Social</h1>
-      {{msg}}
+      <ul class="pnc-social-list">
+        <li v-for="item in social" :key="item.name">
+          <a :href="item.url" class="pnc-social-item" :title="item.name" target="_blank">
+            <i :class="faIcon(item)"></i>
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
@@ -10,9 +15,35 @@
 <script>
 export default {
   name: 'PNCSocial',
+  methods: {
+    faIcon: function (item) {
+      return `pnc-icon--${item.icon} fa fa-${item.icon}`
+    }
+  },
   data () {
     return {
-      msg: `Social Section`
+      social: [
+        {
+          icon: 'github',
+          name: 'GitHub',
+          url: 'https://github.com/patnealcodes'
+        },
+        {
+          icon: 'linkedin',
+          name: 'LinkedIn',
+          url: 'https://www.linkedin.com/in/patnealcodes/'
+        },
+        {
+          icon: 'codepen',
+          name: 'CodePen',
+          url: 'https://codepen.io/patnealcodes/'
+        },
+        {
+          icon: 'twitter',
+          name: 'Twitter',
+          url: 'https://twitter.com/patnealcodes'
+        }
+      ]
     }
   }
 }
@@ -25,5 +56,27 @@ export default {
     .pnc-social {
       background: $black;
       color: white;
+    }
+
+    .pnc-social-list {
+      display: flex;
+      justify-content: center;
+    }
+
+    .pnc-social-item {
+      color: white;
+      font-size: 2em;
+      padding: 0 .25em;
+      transition: .3s all;
+    }
+
+    .pnc-icon {
+      &--twitter {
+        color: $twitter;
+      }
+
+      &--linkedin {
+        color: $linkedin;
+      }
     }
 </style>
