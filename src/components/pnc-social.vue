@@ -77,7 +77,11 @@ export default {
 
     .pnc-icon {
       &--email {
-        color: $email-red;
+        background: $email-red;
+        border-radius: 0.1em;
+        color: $email-gray;
+        line-height: 0.75em;
+        overflow: hidden;
       }
 
       &--twitter {
