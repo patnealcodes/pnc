@@ -2,9 +2,9 @@
   <section class="pnc-header">
     <div class="pnc-header__container">
       <h1 class="pnc-header-text"><span class="pnc-header-text__sub">I'm Patrick Neal.</span> <span class="pnc-header-text__sub">I code things.</span></h1>
-      <a class="pnc-button pnc-button--resume" href="http://resume.patrickneal.codes">
+      <a class="pnc-button pnc-button--resume" href="http://resume.patrickneal.codes" target="_blank">
         <i class="fa fa-download"></i>
-        <span>Resume</span>
+        <span>Resumé</span>
       </a>
     </div>
   </section>

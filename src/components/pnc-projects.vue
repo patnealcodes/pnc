@@ -63,8 +63,12 @@ export default {
   
   .pnc-projects-list {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    overflow: scroll;
+
+    @media screen and (min-width: 590px) {
+      flex-wrap: wrap;
+      overflow: static;
+    }
   }
 
   .pnc-project {
@@ -73,10 +77,15 @@ export default {
       0 .125em .125em 0 rgba(0,0,0,.25);
     border-radius: .25em;
     cursor: pointer;
-    overflow: hidden;
-    margin: 2em 0 0;
+    flex-shrink: 0;
+    margin: 2em 1% 0;
     max-width: 200px;
+    overflow: hidden;
     position: relative;
+
+    @media screen and (min-width: 590px) {
+      flex-shrink: 1;
+    }
 
     img {
       display: block;

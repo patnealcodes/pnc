@@ -2,6 +2,11 @@
   <section class="pnc-social">
     <div class="pnc-social__container">
       <ul class="pnc-social-list">
+        <li>
+          <a href="mailto:apparently@patrickneal.codes" class="pnc-social-item">
+            <i class="pnc-icon--email fa fa-envelope"></i>
+          </a>
+        </li>
         <li v-for="item in social" :key="item.name">
           <a :href="item.url" class="pnc-social-item" :title="item.name" target="_blank">
             <i :class="faIcon(item)"></i>
@@ -71,6 +76,10 @@ export default {
     }
 
     .pnc-icon {
+      &--email {
+        color: $email-red;
+      }
+
       &--twitter {
         color: $twitter;
       }

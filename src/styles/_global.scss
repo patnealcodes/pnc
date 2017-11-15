@@ -30,6 +30,11 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 2.5em;
+    text-align: center;
+
+    @media screen and (min-width: 590px) {
+        text-align: left;
+    }
 }
 
 h2 {
@@ -37,6 +42,15 @@ h2 {
 }
 
 // Global Styles
+.pnc-link {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .pnc-header,
 .pnc-social,
 .pnc-section {
@@ -85,11 +99,11 @@ h2 {
     transition: .2s all ease-in-out;
 
     &--resume {
-        background-color: $button-purple;
+        background-color: $button-blue;
         color: white;
 
         &:hover {
-            background-color: lighten($button-purple, 3);
+            background-color: lighten($button-blue, 3);
         }
     }
 

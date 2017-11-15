@@ -5,7 +5,7 @@
       <ul class="pnc-technologies-list">
         <li class="pnc-technology" v-for="tech in technologies" :key="tech.name">
           <i :class="techClass(tech)"></i>
-          <span>{{tech.name}}</span>
+          <span class="pnc-technology-text">{{tech.name}}</span>
         </li>
       </ul>
     </div>
@@ -92,15 +92,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
     @import '../styles/global';
-    
-    .pnc-technology-icon {
-      font-size: 2.5em;
-    }
 
     .pnc-technologies-list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
     }
 
     .pnc-technology {
@@ -108,6 +104,22 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 1.75em;
+      padding: 1em;
+
+      @media screen and (min-width: 590px) {
+        padding: 1.75em;
+      }
+    }
+
+    .pnc-technology-icon {
+      font-size: 2.5em;
+    }
+
+    .pnc-technology-text {
+      display: none;
+
+      @media screen and (min-width: 590px) {
+        display: block;
+      }
     }
 </style>

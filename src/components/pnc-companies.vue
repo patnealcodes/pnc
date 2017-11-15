@@ -37,6 +37,10 @@ export default {
           name: 'Ascena Retail'
         },
         {
+          filename: 'genospace.png',
+          name: 'Genospace'
+        },
+        {
           filename: 'eyemed.png',
           name: 'Eyemed Visioncare'
         },
@@ -77,7 +81,7 @@ export default {
     .pnc-companies-list {
       align-items: center;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       flex-wrap: wrap;
     }
 
